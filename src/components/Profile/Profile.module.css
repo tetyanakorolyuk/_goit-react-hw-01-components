@@ -1,0 +1,46 @@
+.profile {
+  margin: 10px auto;
+  padding: 10px;
+  width: 320px;
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.avatar {
+  margin: 0 auto;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tag,
+.location {
+  font-size: 16px;
+}
+
+.location {
+  font-weight: 500;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0;
+  background-color: #f5f8f8;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.stats > li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+}

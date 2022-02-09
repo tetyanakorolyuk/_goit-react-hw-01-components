@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import getRandomHexColor from '../../helpers/randomHexColor';
 import s from './Statistics.module.css';
 
-function Statistics({ stats }) {
+function Statistics({ stats, title }) {
   return (
   <section className={s.statistics}>
-  <h2 className={s.title}>Upload stats</h2>
+  {title && <h2 className={s.title}>Upload stats</h2>}
   <ul className={s.list}>
     {stats.map(stat => (
       <li className={s.item} key={stat.id} style={{ backgroundColor: getRandomHexColor() }}>
@@ -17,11 +18,8 @@ function Statistics({ stats }) {
   );
 }
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
 Statistics.propTypes = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id:PropTypes.string.isRequired,
